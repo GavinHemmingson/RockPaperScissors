@@ -70,14 +70,19 @@ function results(playerSelection, computerSelection)
     }
 }
 
+function playGame()
+{
+    getComputerChoice();
+    getPlayerChoice();
+    alert(results(playerSelection, computerSelection));
+}
+
 function playRound()
 {
 
     for(let i = 0; i < 5; i++)
     {
-        getComputerChoice();
-        getPlayerChoice();
-        alert(results(playerSelection, computerSelection));
+        playGame();
     }
 
     if(compWin > playWin)
